@@ -1,0 +1,16 @@
+#This code is used to display a pain assesment
+#This code helps to reak down the 'pain faces' seen universally in hospitals
+#Starting with introduing myself
+print ('Hello, my name is Lucretia and I will be assisting you today.')
+while True:   
+  response = int(input('What is your pain score on a scale of 1-10? '))    
+  #The patient will enter their specific pain score and if it is greater than or equal to 4 then the response below will be displayed   
+  if response >=5:       
+    print ('Your pain is high and we would like to keep your pain manageable. Lets see what we can get you for pain. ')    
+  #If the patients pain is less than or equal to 3 then the response below will be displayed   
+  elif response >=3:            
+    print ('Your pain seems tolerable for now. Let me know if you would like to take something for your pain.')    
+  else:               
+    print ('That is great! I will be back in to check your vital signs.')               
+    break
+  #The loop continues in Q4 hours per shift until the patient is discharged                
