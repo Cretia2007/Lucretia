@@ -13,4 +13,5 @@ while True:   
   else:               
     print ('That is great! I will be back in to check your vital signs.')               
     break
-  #The loop continues in Q4 hours per shift until the patient is discharged                
+  #The loop continues in Q4 hours per shift until the patient is discharged
+  #Medical terminology tip: Q = Every 
