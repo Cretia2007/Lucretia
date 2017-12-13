@@ -1,0 +1,38 @@
+package heights;
+import java.util.Scanner;
+/**
+ *
+ * @author Lucretia
+ */
+public class Heights {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int numChildren;
+        double [] heights;
+        System.out.println("How many children do you have? ");
+        numChildren = in.nextInt();
+        heights = new double [numChildren];
+        for (int i = 0; i<numChildren; i++){
+            System.out.println(" Enter your child's height in inches: ");
+            heights [i] = in.nextDouble();
+            
+            
+        }
+        double maxHeight = heights[0];
+        for(int i = 1;i<heights.length;i++){
+            if(maxHeight < heights[i]);
+            maxHeight = heights[i];
+        }
+        double total = 0;
+        for(int i = 0; i<heights.length;i++){
+            total += heights[i];
+        }
+         System.out.println("The tallest child is: "+ maxHeight + " inches.");
+         System.out.println("The avaerage height for all your children is: " + (total/numChildren) + " inches");
+    }
+    
+}
