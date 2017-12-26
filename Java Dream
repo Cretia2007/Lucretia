@@ -1,0 +1,9 @@
+public class Program {
+    public static void main(String[] args) {
+        String firstName, lastName;
+        firstName = "Lucretia";
+        lastName = "G.";
+        
+        System.out.println("Once I'm married my name will be " + firstName +" "+lastName);
+    }
+}
