@@ -1,0 +1,91 @@
+public class Customer {
+
+    private static int itemsToPurchase;
+    private static int itemCounter;
+    private static double taxRate;
+    private static double totalAmount;
+
+    public static void main(String[] args) {
+        //Create a keyboard input object
+        Scanner keyboard = new Scanner(System.in);
+        //Display on the console - ask for the customer's name
+        System.out.println("Please enter your name: ");
+        //Get the customer name from the keyboard and store it in the String object "customerName"
+        String customerName = keyboard.next();
+        System.out.println("");
+        //Display the customer's name on the console using println()
+        System.out.println("Welcome, " + customerName + "!");
+        //create the cost of items to be sold
+        String[] itemNames = {"Tennis Shoes ", "Shirts ","Coats ","Belts ","Pants "};
+        double[]itemCosts = {45.89,25.55,89.99,15.00,25.99};
+        
+        //Variable to store financial information
+        double totalAmount = 0.0;
+        double taxRate = 0.081;
+        //Discount for large purchases
+        double discountRate = 0.025; //2.5%
+        double amountToQualifyForDiscount = 100;
+        double discountAmount = 0;
+        
+        //Display items for sale on the console
+        System.out.println("The following clothing items are availabel for purchase:");
+        for(int i=0;i<itemNames.length;i++)
+        {
+        //Display each iten in the array
+            System.out.println("  "+(i +1)+"."+ itemNames[i]+ "for $"+ itemCosts[i]+" each");
+        }
+                     
+            
+        System.out.println("");
+        //Ask the customer for how many items they wish to purchase + going to use this number for a loop exit condition
+        System.out.println("How many of the above items do you wish to purchase");
+        
+        //Get the number of items from the keyboard
+        //int itemsToPurchase = keyboard.nextInt();
+        System.out.println("");
+        
+        //Display the customer's name and the number of items they wish to purchase on the console using println()
+        System.out.println("Ok, " +customerName+ ", please enter the product ID (the number to the left of the item name)that you wish to purchase. Enter 0 when you are finished. ");
+        
+        
+        
+        //Loop until the user enters 0
+        int itemID = 0; //Set the condition to 0
+        int itemCounter = 1; //No longer loop counter, now used for display
+        do
+        {
+        //prompt the user
+        System.out.println("Please enter item ID number "+(itemCounter)+"( enter 0 to exit): ");
+        itemID = keyboard.nextInt();
+        //If the user has not entered 0 then add to the total
+        if(itemID>0){
+        //Add to the total
+        totalAmount = totalAmount + itemCosts[itemID-1];
+        //Increment the item display counter
+        itemCounter++;
+        }
+        }
+        while (itemID!=0);//check if exit condition has been met
+        //The loop is complete, calculate the discount and taxes and then display the results
+        if(totalAmount>=amountToQualifyForDiscount){
+        discountAmount = totalAmount*discountRate;
+        }
+        else{
+        discountAmount = 0;
+        }
+        //Calculate the taxes
+        double taxAmount = (totalAmount + discountAmount)*taxRate;
+        //Display the results
+        
+        System.out.println("");
+        System.out.println("You selected "+itemCounter+" items to purchase.");
+        System.out.printf("Your sales total $%5.2f",totalAmount);
+        System.out .printf(" Your discount amount is $%5.2f",discountAmount);
+        System.out.printf(" Your sales tax is $%5.2f",taxAmount);
+        System.out.printf(" The total amount due is $%5.2f",(totalAmount +discountAmount+taxAmount));
+        System.out.println("");
+        
+        
+        
+    }
+}
