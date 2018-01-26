@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".helloAndroid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/vr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/vr" />
+
+
+    <TextView
+        android:id="@+id/Udacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/vr"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="172dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Udacity"
+        android:textColor="#cb3116c6"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/st"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Udacity"
+        android:layout_alignStart="@+id/Udacity"
+        android:layout_alignTop="@+id/Udacity"
+        android:layout_marginTop="37dp"
+        android:fontFamily="sans-serif-light"
+        android:text="2465 Latham St"
+        android:textColor="#34477f"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/ca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/st"
+        android:layout_alignStart="@+id/st"
+        android:layout_below="@+id/st"
+        android:fontFamily="sans-serif-light"
+        android:text="Mountain View, CA 94043"
+        android:textColor="#34477f"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ca"
+        android:layout_alignStart="@+id/ca"
+        android:layout_below="@+id/ca"
+        android:fontFamily="sans-serif-light"
+        android:text="650-555-5555"
+        android:textColor="#34477f"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:fontFamily="sans-serif-light"
+        android:text="www.udacity.com"
+        android:textColor="#22580e"
+        android:textSize="20sp"
+        android:textStyle="italic"/>
+
+
+
+
+
+</RelativeLayout>
